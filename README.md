@@ -1,6 +1,12 @@
 # solved-tasks
-* task 1
+#### Sum of Multiples
 ```javascript
-const a = 123;
-let a = 3;
+function sumMul(n,m){
+  let sum = 0;
+  if (n <=0 || m <=0)return "INVALID";
+  for (i = n; i < m; i=i+n ){
+    sum = sum + i
+}
+  return sum;
+}
 ```
