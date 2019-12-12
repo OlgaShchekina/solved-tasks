@@ -83,5 +83,15 @@ function squares(x, n) {
     x = x * x;
   }
   return arr;
+} 
+```
+#### Square Every Digit
+```javascript
+function squareDigits(num){
+  let n = num.toString().split('');
+  for (let i = 0; i < n.length;i++){
+    n[i]=(n[i]*n[i]);
+  }
+  return +n.join('');
 }
 ```
