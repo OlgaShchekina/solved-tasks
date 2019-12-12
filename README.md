@@ -68,3 +68,20 @@ function elevator(left, right, call){
 return Math.abs(call-left) < Math.abs(call-right) ? 'left' : 'right';
 }
 ```
+#### Alan Partridge II - Apple Turnover
+```javascript
+function apple(x){
+return Math.pow(x,2) > 1000?'It\'s hotter than the sun!!':'Help yourself to a honeycomb Yorkie for the glovebox.'
+}
+```
+#### Squares sequence
+```javascript
+function squares(x, n) {
+  var arr = [];
+  for(let i = 0; i < n; i++){
+    arr.push(x);
+    x = x * x;
+  }
+  return arr;
+}
+```
