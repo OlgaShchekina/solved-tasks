@@ -95,3 +95,37 @@ function squareDigits(num){
   return +n.join('');
 }
 ```
+#### Find the next perfect square!
+```javascript
+function findNextSquare(sq) {
+   return Math.sqrt(sq)%1===0 ? Math.pow(Math.sqrt(sq)+1,2) : -1
+}
+```
+
+#### Powers of 2
+```javascript
+function powersOfTwo(n){
+let arr = [];
+for (let i = 0; i <= n; i++){
+arr[i] = Math.pow(2,i)
+}
+  return arr;
+}
+```
+#### 5 without numbers !!
+```javascript
+function unusualFive() {
+let str = 'Five!'
+  return str.length;
+}
+```
+#### Odd or Even?
+```javascript
+function oddOrEven(array) {
+let sum = 0;
+   for (let i = 0; i < array.length; i++){
+   sum = sum + array[i];
+   }
+   return sum%2===0?'even':'odd';
+}
+```
