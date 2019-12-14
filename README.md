@@ -129,3 +129,59 @@ let sum = 0;
    return sum%2===0?'even':'odd';
 }
 ```
+#### Holiday VIII - Duty Free
+```javascript
+function dutyFree(normPrice, discount, hol){
+return Math.floor(hol/(normPrice * discount / 100));
+}
+```
+#### How many times should I go?
+```javascript
+function howManyTimes(annualPrice, individualPrice) {
+  return Math.ceil(annualPrice/individualPrice);
+}
+```
+#### Formatting decimal places #1
+```javascript
+function twoDecimalPlaces(number) {
+return Math.trunc(number*100)/100;
+}
+```
+#### Lario and Muigi Pipe Problem
+```javascript
+function pipeFix(numbers){
+let arr = [];
+for (i = numbers[0]; i <= numbers[numbers.length-1]; i++){
+arr.push(i)
+}
+return arr;
+}
+```
+#### Calculate Price Excluding VAT
+```javascript
+function excludingVatPrice(price){
+  return  price === null ? -1 : Number((price / 1.15).toFixed(2))
+}
+```
+#### Parse nice int from char problem
+```javascript
+function getAge(inputString){
+return parseInt(inputString,10);
+}
+```
+#### Bin to Decimal
+```javascript
+function binToDec(bin){
+  return parseInt(bin, 2);
+}
+```
+#### Parse float
+```javascript
+function parseF(s) {
+  return Number.isNaN(parseFloat(s)) ? null : parseFloat(s)
+}
+```
+
+
+     
+     
