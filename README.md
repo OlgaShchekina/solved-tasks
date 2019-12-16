@@ -181,6 +181,198 @@ function parseF(s) {
   return Number.isNaN(parseFloat(s)) ? null : parseFloat(s)
 }
 ```
+#### Count the Monkeys!
+```javascript
+function monkeyCount(n) {
+let arr = [];
+for (let i = 1; i <= n; i++){
+arr.push(i);
+}
+return arr;
+}
+```
+#### Sum Arrays
+```javascript
+function sum (numbers) {
+let sum = 0;
+  for (i = 0; i < numbers.length; i++){
+  sum = sum + numbers[i];
+}
+    return sum;
+    
+};
+```
+#### Is every value in the array an array?
+```javascript
+const arrCheck = value => value.every(Array.isArray);
+```
+#### Enumerable Magic #3 - Does My List Include This?
+```javascript
+function include(arr, item){
+  for (let i = 0; i < arr.length; i++){
+    if (arr[i] === item){
+      return true;
+    } 
+  }
+  return false;
+}
+```
+#### Difference of Volumes of Cuboids
+```javascript
+function findDifference(a,b ){
+  let v1 = 1;
+  let v2 = 1;
+  for (let i = 0; i< a.length; i++){
+    v1 = v1*a[i];
+  }
+  for (let i = 0; i< b.length; i++){
+    v2 = v2*b[i];
+  }
+  return Math.abs(v2-v1)
+}
+```
+#### Difference of Volumes of Cuboids
+```javascript
+function findDifference(a, b)
+{
+let v1 = a.reduce((x,y) => x*y);
+let v2 = b.reduce((x,y) => x*y);
+return  Math.abs(v2-v1);
+}
+ 
+```
+#### Total amount of points
+```javascript
+function points(games) {
+ let count = 0;
+  for (i = 0; i < games.length; i++) {
+    if (games[i][0] > games[i][2]) count = count + 3;
+    if (games[i][0] === games[i][2]) count = count + 1;
+  }
+ return count;
+}
+```
+#### Find the first non-consecutive number
+```javascript
+function firstNonConsecutive(arr) {
+  for (let i = 0; i < arr.length-1 ; i++) {
+   if (arr[i+1]-arr[i]!==1) return arr[i+1];
+  }
+return null;
+}
+```
+#### How good are you really?
+```javascript
+function betterThanAverage(arr, yourPoints) {
+let sum = 0;
+  let average; 
+  for (let i = 0; i < arr.length; i++){
+  sum = sum + arr[i];
+    average = sum/arr.length;
+  }
+  return yourPoints > average? true: false;
+}
+```
+#### Calculate average
+```javascript
+function find_average(arr) {
+let sum = 0;
+  for (let i = 0; i < arr.length; i++){
+  sum = sum + arr[i];
+}
+return  sum/arr.length;
+}
+```
+#### Sum of Odd Cubed Numbers
+```javascript
+function cubeOdd(arr) {
+let sum = 0;
+for (let i = 0; i < arr.length; i++){
+  if (typeof arr[i] !== 'number') return undefined;
+  if (arr[i] % 2!==0)
+{
+  sum = sum + (arr[i]**3);
+  }
+}
+return sum;
+}
+```
+#### Find Maximum and Minimum Values of a List
+```javascript
+var min = function(list){
+    
+    return Math.min(...list);
+}
+
+var max = function(list){
+    
+    return Math.max(...list);
+}
+```
+#### Sum of two lowest positive integers
+```javascript
+function sumTwoSmallestNumbers(numbers){  
+  numbers = numbers.sort(function(a, b){return a - b; });
+  return numbers[0] + numbers[1];
+}
+```
+#### Remove the minimum
+```javascript
+function removeSmallest(numbers) {
+  let arr = [];
+  let min = numbers[0];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] < min) {
+     min = numbers[i];
+    }
+  }
+  for (let j = 0; j < numbers.length; j++) {
+    if (j !== numbers.indexOf(min)) {
+      arr.push(numbers[j]);
+    } 
+  }
+  return arr;
+}
+```
+#### Unfinished Loop - Bug Fixing #1
+```javascript
+function createArray(number){
+  let newArray = [];
+  for(let i = 1; i <= number; i++){
+    newArray.push(i);
+  }
+  return newArray;
+}
+```
+#### Find the divisors!
+```javascript
+function divisors(n) {
+  let arr = [];
+  for (let i = 2 ; i <= n-1; i++){
+    if (n % i === 0 ){ 
+      arr.push(i)
+    } 
+  }
+  if (arr.length === 0) {
+    return `${n} is prime`;
+  }
+  return arr;
+}
+```
+#### No Loops 2 - You only need one
+```javascript
+function check(a,x){
+return a.includes(x);
+};
+```
+#### A wolf in sheep's clothing
+```javascript
+function warnTheSheep(queue) {
+const index = queue.indexOf('wolf');
+  return index === queue.length-1 ? "Pls go away and stop eating my sheep"
+  :`Oi! Sheep number ${queue.length-1-index}! You are about to be eaten by a wolf!`
+}
+```
 
 
      
