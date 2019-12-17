@@ -363,7 +363,7 @@ function divisors(n) {
 ```javascript
 function check(a,x){
 return a.includes(x);
-};
+}
 ```
 #### A wolf in sheep's clothing
 ```javascript
@@ -373,7 +373,73 @@ const index = queue.indexOf('wolf');
   :`Oi! Sheep number ${queue.length-1-index}! You are about to be eaten by a wolf!`
 }
 ```
+#### Find numbers which are divisible by given number
+```javascript
+const divisibleBy = (numbers, divisor) =>
+  numbers.filter(el => el % divisor === 0);
+```
+#### Removing Elements
+```javascript
+function removeEveryOther(arr){
+  return arr.filter((el, i) => i % 2 === 0);
+}
+```
+#### Well of Ideas - Easy Version
+```javascript
+function well(x){
+const ideas = x.filter(idea => idea === 'good').length;
 
+  if (ideas > 2) return 'I smell a series!';
+  if (ideas > 0) return 'Publish!';
+  return 'Fail!';
+}
+```
+#### Find how many times did a team from a given country win the Champions League?
+```javascript
+function countWins(winnerList, country) {
+   return winnerList.filter(el => el.country === country).length;
+}
+
+```
+#### filterEvenLengthWords
+```javascript
+function filterEvenLengthWords(words) {
+  return words.filter (el => el.length % 2 ===0);
+}
+```
+#### Array.diff
+```javascript
+function array_diff(a,b) {
+return a.filter(el => !b.includes(el))
+}
+```
+#### Find Duplicates
+```javascript
+function duplicates(arr) {
+ return arr.filter((el, i) => i !== arr.indexOf(el) && i === arr.lastIndexOf(el));
+}
+```
+#### Train to remove duplicates from an array with filter()
+```javascript
+function unique(arr) {
+return arr.filter((el, i) => i === arr.indexOf(el)); 
+}
+```
+#### Divide and Conquer
+```javascript
+function divCon(x){
+let sum1 = 0;
+let sum2 = 0;
+for (let i = 0; i < x.length; i++){
+if (typeof x[i] === 'string'){
+sum1 = sum1 + +x[i]
+} else {
+sum2 = sum2 + x[i]
+}
+}
+return sum2-sum1;
+}
+```
 
      
      
