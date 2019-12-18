@@ -440,6 +440,75 @@ sum2 = sum2 + x[i]
 return sum2-sum1;
 }
 ```
-
+#### String Templates - Bug Fixing #5
+```javascript
+function buildString(...template){
+  return `I like ${template.join(', ')}!`;
+}
+```
+#### Enumerable Magic #1 - True for All?
+```javascript
+function all( arr, fun ){
+ return arr.every(fun); 
+}
+```
+#### Grasshopper - Array Mean
+```javascript
+function findAverage(nums) {
+ let result = nums.reduce((acc, curr) => acc + curr); 
+  return result/nums.length;
+}
+```
+#### Beginner - Reduce but Grow
+```javascript
+function grow(x){
+return x.reduce((acc, curr) => acc * curr, 1);
+}
+```
+#### Array plus array
+```javascript
+function arrayPlusArray(arr1, arr2) {
+  let arr3 = arr1.concat(arr2);
+  return arr3.reduce((acc, curr) => acc + curr); 
+}
+```
+#### SpeedCode #2 - Array Madness
+```javascript
+function arrayMadness(a, b) {
+let result1 = a.reduce((acc, curr) => acc + Math.pow(curr,2),0); 
+  let result2 = b.reduce((acc, curr) => acc + Math.pow(curr,3),0); 
+  return result1 > result2;
+}
+```
+#### Beginner - Lost Without a Map
+```javascript
+function maps(x){
+return x.map(el => el*2);
+}
+```
+#### Remove First and Last Character Part Two
+```
+function array(arr){
+return arr.split(',').slice(1,-1).join(' ')|| null;
+}
+```
+#### Jenny's secret message
+```javascript
+function greet(name){
+return name === "Johnny"? "Hello, my love!" : "Hello, " + name + "!";
+}
+```
+#### get character from ASCII Value
+```javascript
+function getChar(c){
+ return String.fromCodePoint(c);
+}
+```
+#### Is this my tail?
+```javascript
+function correctTail(bod, tail) {
+ return bod[bod.length - 1] === tail ? true : false;
+    }
+```
      
      
