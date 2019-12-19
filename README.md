@@ -510,5 +510,106 @@ function correctTail(bod, tail) {
  return bod[bod.length - 1] === tail ? true : false;
     }
 ```
-     
+#### Numbers to Letters
+```javascript
+function switcher(x){
+let alf = ' zyxwvutsrqponmlkjihgfedcba!? ';
+return x.map(i => alf[i]).join('');
+}
+```
+#### Regex count lowercase letters
+```javascript
+function lowercaseCount(str){
+return (str.match(/[a-z]/g) || []).length;
+}
+```
+#### Regex count lowercase letters -add
+````javascript
+function lowercaseCount(str){
+  let alf = ' abcdefjhigklmnopqrstuvwxyz';
+  let count = 0;
+ for (let i = 0; i< str.length; i++){
+ if (alf.indexOf(str[i]) >= 0) {
+            count++;
+ }
+        }
+  return count;
+ }
+````
+#### Spacify
+```javascript
+function spacify(str) {
+  let s = '';
+  for (let i = 0; i< str.length; i++){
+    s = s + str[i] + ' ';
+  }
+ return s.slice(0,-1);
+}
+```
+#### Spacify
+```javascript
+function spacify(str) {
+  return str.split("").join(" ");
+}
+```
+#### Is it a palindrome?
+```javascript
+function isPalindrome(x) {
+  let s = '';
+for (let i = x.length - 1; i >= 0; i--){
+  s = s + x[i];
+}
+  return s.toLowerCase() === x.toLowerCase();
+}
+```
+#### Is it a palindrome? -add
+```javascript
+function isPalindrome(x) {
+  let s = x.split('').reverse().join('');
+  return s.toLowerCase() === x.toLowerCase();
+}
+```
+#### Mumbling
+```javascript
+function accum(s) {
+  const res = [];
+  for (let i = 0; i < s.length; i++) {
+    let row = s[i].toUpperCase();
+    for (let j = 0; j < i; j++) {
+      row += s[i].toLowerCase();
+    }
+    res.push(row);
+  }
+  return res.join('-');
+}
+```
+#### Find the capitals
+```javascript
+function capitals(word) {
+ let arr = [];
+  for (let i = 0; i < word.length; i++){
+    if (word[i] === word[i].toUpperCase()){
+      arr.push(i)
+    }
+  }
+  return arr;
+}
+```
+#### repeatIt
+```javascript
+var repeatIt = function(str, n) {
+return  typeof str === 'string' ? str.repeat(n) : 'Not a string'
+  }
+```
+#### Draw stairs
+```javascript
+function drawStairs(n) {
+  let str = '';
+  let w = ' ';
+  for (let i = 0; i < n; i++){
+    str = str + w.repeat(i)+'I' + '\n';
+  }
+    return str.slice(0,-1);
+}
+```
      
