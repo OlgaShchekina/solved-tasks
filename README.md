@@ -612,4 +612,152 @@ function drawStairs(n) {
     return str.slice(0,-1);
 }
 ```
-     
+#### Do you speak "English"?
+```javascript
+function spEng(sentence){
+let word = 'English'.toUpperCase();
+return sentence.toUpperCase().includes(word);
+}
+```
+#### Rock Paper Scissors!
+```javascript
+const rps = (p1, p2) => {
+  if (p1 === p2) return 'Draw!';
+  if (
+    (p1 === 'scissors' && p2 === 'paper') ||
+    (p1 === 'rock' && p2 === 'scissors') ||
+    (p1 === 'paper' && p2 === 'rock')
+  )
+    return 'Player 1 won!';
+  if (
+    (p2 === 'scissors' && p1 === 'paper') ||
+    (p2 === 'rock' && p1 === 'scissors') ||
+    (p2 === 'paper' && p1 === 'rock')
+  )
+    return 'Player 2 won!'
+};
+```
+#### Don't give me five!
+```javascript
+function dontGiveMeFive(start, end) {
+  let count = 0;
+  for (let i = start; i <= end; i++) {
+    if (i.toString().includes("5")===false) {
+      count++;
+    }
+  }
+  return count;
+
+}
+```     
+#### Binary Addition
+```javascript
+function addBinary(a,b) {
+ return (a+b).toString(2);
+}
+```
+#### Find the position!
+```javascript
+function position(letter){
+let alf = ' abcdefghijklmnopqrstuvwxyz';
+return `Position of alphabet: ${alf.indexOf(letter)}`;
+}
+```
+#### String ends with?
+```javascript
+function solution(str, ending){
+  return str.endsWith(ending);
+}
+```
+#### Credit Card Mask
+```javascript
+function maskify(cc) {
+  let s = cc.slice(-4);
+  let r = cc.slice(0,-4)
+  .split('')
+  .map(el => '#')
+  .join('');
+return r + s;
+}
+```
+#### Vowel remover
+```javascript
+function shortcut(string){
+return string.replace(/[aeiou]/g, '')
+}
+```
+#### Correct the mistakes of the character recognition software
+```javascript
+function correct(str){
+return str.replace(/5/g, 'S').replace(/1/g, 'I').replace(/0/g, 'O');
+}
+```
+#### Fake Binary
+```javascript
+function fakeBin(x){
+return x.replace(/[0-4]/g, 0).replace(/[5-9]/g, 1);
+}
+```
+#### Exclamation marks series #2: Remove all exclamation marks from the end of sentence
+```javascript
+function remove(s){
+ return s.replace(/!+$/g, '')
+}
+```
+#### FIXME: Replace all dots
+```javascript
+var replaceDots = function(str) {
+  return str.replace(/\./g, '-');
+}
+```
+#### Reversed Words
+```javascript
+function reverseWords(str){
+  return str.split(' ').reverse().join(' '); // reverse those words
+}
+```
+#### Squash the bugs
+```javascript
+function findLongest(str){
+ let arr = str.split(" ");
+  let longest = 0;
+  for (let i = 0; i < arr.length; i++){
+    if (arr[i].length > longest){
+      longest = arr[i].length;
+    }
+  }
+ return longest;
+}
+```
+#### Highest and Lowest
+```javascript
+function highAndLow(numbers){
+ let arr = numbers.split(' ');
+ let min = arr[0];                    
+ let max = arr[0];                    
+    for (let i = 1; i < arr.length; i++){ 
+ arr[i] = +arr[i];
+    if (arr[i] < min) {                 
+  min = arr[i];                     
+}
+    if (arr[i] > max) {                
+  max = arr[i];                     
+}
+}
+  return  `${max} ${min}`;
+}
+```
+#### 
+Every possible sum of two digits
+```javascript
+function digits(num){
+  let arr = num.toString().split('');
+  let arr1 = [];
+  for (let i = 0; i < arr.length; i++){ 
+    for (let j = 1+i; j < arr.length; j++){
+      arr1.push(+arr[i]+ +arr[j]);
+    }
+}
+ return arr1;
+}
+```
