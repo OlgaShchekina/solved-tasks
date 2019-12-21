@@ -761,3 +761,69 @@ function digits(num){
  return arr1;
 }
 ```
+#### Welcome!
+```javascript
+let welcomeObj = {
+  english: 'Welcome',
+  czech: 'Vitejte',
+  danish: 'Velkomst',
+  dutch: 'Welkom',
+  estonian: 'Tere tulemast',
+  finnish: 'Tervetuloa',
+  flemish: 'Welgekomen',
+  french: 'Bienvenue',
+  german: 'Willkommen',
+  irish: 'Failte',
+  italian: 'Benvenuto',
+  latvian: 'Gaidits',
+  lithuanian: 'Laukiamas',
+  polish: 'Witamy',
+  spanish: 'Bienvenido',
+  swedish: 'Valkommen',
+  welsh: 'Croeso',
+};
+
+function greet(language) {
+  return welcomeObj [language] || welcomeObj.english;
+  }
+```
+#### Duck Duck Goose
+```javascript
+function duckDuckGoose(players, goose) {
+  return players[(goose-1) % players.length].name;
+}
+```
+#### Make a function that does arithmetic!
+```javascript
+function arithmetic(a, b, operator){
+  if (operator === 'add') return a + b;
+  if (operator === 'subtract') return a - b;
+  if (operator === 'multiply') return a * b;
+  if (operator === 'divide') return a / b;
+}
+```
+#### makeBackronym
+```javascript
+let makeBackronym = function(string){
+ return string.toUpperCase().split('').map(elem=>dict[elem]).join(' ');
+}
+```
+#### Check three and two
+```javascript
+function checkThreeAndTwo(arr) {
+  let c1 = 0;
+  let c2 = 0;
+  let c3 = 0;
+  for (let i = 0; i < arr.length; i++){
+    if (arr[i] === "a") c1 = c1 + 1;
+    if (arr[i] === "b") c2 = c2 + 1;
+    if (arr[i] === "c") c3 = c3 + 1;
+  }
+
+  return (c1 === 2 || c2 === 2 || c3 === 2) && (c1 === 3 || c2 === 3 || c3 === 3);
+}
+```
+
+
+
+
