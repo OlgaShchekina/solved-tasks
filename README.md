@@ -823,6 +823,111 @@ function checkThreeAndTwo(arr) {
   return (c1 === 2 || c2 === 2 || c3 === 2) && (c1 === 3 || c2 === 3 || c3 === 3);
 }
 ```
+#### Job Matching #1
+```javascript
+function match(candidate, job) {
+  if(!candidate.minSalary || !job.maxSalary) throw "Error!";
+  return (candidate.minSalary * 0.9) <= job.maxSalary;
+}
+```
+#### Numbers to Objects
+```javascript
+function numObj(s){
+  let arr = [];
+ for (let i = 0; i < s.length; i++){
+   const obj = {};
+   obj[s[i]] = String.fromCharCode(s[i]);
+   arr.push(obj)
+ }
+  return arr;
+}
+```
+#### Numbers to Objects
+```javascript
+function numObj(s){
+return s.map(el => ({[el]: String.fromCharCode(el)}));
+}
+```
+#### Coding Meetup #5 - Higher-Order Functions Series - Prepare the count of languages
+```javascript
+function countLanguages(list) {
+  let obj = {};
+  for (i = 0; i< list.length; i++){
+    if (obj[list[i].language]) {
+      obj[list[i].language] = obj[list[i].language] + 1;
+    } else {
+      obj[list[i].language] = 1;
+    }
+  }
+  return obj;
+}
+```
+#### What is my name score? #1
+```javascript
+//let alpha={'ABCDE':1,'FGHIJ':2,'KLMNO':3,'PQRST':4,'UVWXY':5}
+function nameScore(name) {
+	let str = name.toUpperCase().split('');
+	let score = 0;
+	let result = {};
+	for (let x in alpha) {
+		for (let i = 0; i < str.length; i++) {
+			if (x.includes(str[i]) === true) {
+				score += alpha[x];
+			}
+		}
+	}
+
+	result[name] = score;
+	return result;
+}
+```
+#### Power
+```javascript
+function numberToPower(number, power){
+let result = 1;
+  for (let i = 1;i <= power;i++) {
+   result = result * number
+  }
+return result;
+}
+```
+#### No zeros for heros
+```javascript
+function noBoringZeros(n) {
+  while(n%10===0 && n!==0){n/=10;}
+  return n;
+}
+```
+#### The wheat/rice and chessboard problem
+```javascript
+function squaresNeeded(grains){
+ const arr=[0];
+ for (let i=0;i<63;i++){
+ arr.push(Math.pow(2,i));
+ if (grains<arr[i]){
+   return i-1;}
+ }
+}
+```
+#### simple calculator
+```javascript
+function calculator(a,b,sign){
+  if ((typeof a === "number") && (typeof b === "number")) {
+    switch (sign) {
+    case "+":
+      return a + b;
+    case "-":
+      return a - b;
+    case "*":
+      return a * b;
+    case "/":
+      return a / b;
+    }
+  }
+  return "unknown value";
+}
+```
+
 
 
 
