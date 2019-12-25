@@ -927,7 +927,52 @@ function calculator(a,b,sign){
   return "unknown value";
 }
 ```
-
+#### Price of Mangoes
+```javascript
+function mango(quantity, price){
+return (quantity - Math.floor(quantity / 3))* price;
+}
+```
+#### The Office I - Outed
+```javascript
+function outed(meet, boss){
+  let sum = 0;
+for(let key in meet){
+  sum = sum + meet[key];
+}
+  let average = (sum + meet[boss])/Object.values(meet).length;
+  return average > 5 ? 'Nice Work Champ!':'Get Out Now!'
+}
+```
+#### The Office I - Outed
+```javascript
+function outed(meet, boss){
+  return (Object.values(meet).reduce((acc,curr) => acc+curr,0) + meet[boss]) / Object.values(meet).length <= 5 ? 'Get Out Now!' : 'Nice Work Champ!';
+}
+```
+#### How many days are we represented in a foreign country?
+```javascript
+function daysRepresented(trips){
+  let arr=[];
+  for (let i=0; i<trips.length; i++){
+    for (let j=trips[i][0]; j<=trips[i][1]; j++)
+      if (arr.indexOf(j)===-1)
+        arr.push(j);}
+  return arr.length;
+}
+```
+#### You're a square!
+```javascript
+function isSquare(n){
+  return Number.isInteger(Math.sqrt(n));
+}
+```
+#### All Star Code Challenge #22
+```javascript
+function toTime(seconds) {
+return `${Math.floor(seconds/3600)} hour(s) and ${Math.floor((seconds/60)) % 60} minute(s)`;
+}
+```
 
 
 
