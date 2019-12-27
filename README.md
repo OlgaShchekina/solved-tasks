@@ -986,7 +986,60 @@ function race(v1, v2, g) {
   return [h, m, s];
 }
 ```
+#### Most valuable character
+```javascript
+function solve(st) {
+  return st.split('').sort()
+.reduce((acc , curr) => st.lastIndexOf(acc) - st.indexOf(acc) < st.lastIndexOf(curr) - st.indexOf(curr) ? curr : acc);
+}
+```
+#### Permute a Palindrome
+```javascript
+function permuteAPalindrome (input){
+  let arr = input.split('').sort();
+  console.log(arr);
+  const obj = {};
+  let c = 0;
+   for (let i = 0; i < arr.length; i++){
+     if (obj[arr[i]]){
+     obj[arr[i]] = obj[arr[i]]+1; 
+     } else {
+       obj[arr[i]] = 1;
+     }
+   }
+  let count = 0;
+   for(let key in obj){
+     if (obj[key] %2 !==0) {
+       count++;
+       if (count > 1) return false;
+     }                                                     
+   }
+  return true;            
+  }
+```
+#### The Office II - Boredom Score
+```javascript
+const score = {
+  accounts: 1,
+  finance: 2,
+  canteen: 10,
+  regulation: 3,
+  trading: 6,
+  change: 6,
+  IS: 8,
+  retail: 5,
+  cleaning: 4,
+  'pissing about': 25,
+};
 
+function boredom(staff){
+  const teamScore = Object.values(staff).reduce((acc, curr) => acc + score[curr], 0)
+  if (teamScore <= 80) return 'kill me now';
+ if (teamScore >= 100) return 'party time!!';
+ return 'i can handle this';
+
+}
+```
 
 
 
