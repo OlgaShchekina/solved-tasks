@@ -1033,13 +1033,60 @@ const score = {
 };
 
 function boredom(staff){
-  const teamScore = Object.values(staff).reduce((acc, curr) => acc + score[curr], 0)
+  const teamScore = Object.values(staff).reduce((acc, curr) => acc + score[curr], 0);
   if (teamScore <= 80) return 'kill me now';
  if (teamScore >= 100) return 'party time!!';
  return 'i can handle this';
 
 }
 ```
-
-
-
+#### Santa's Naughty List
+```javascript
+function findChildren(santasList, children) {
+  let arr = [];
+  for (i = 0; i < children.length; i++){
+     for (j = 0; j < santasList.length; j++){
+        if (arr.indexOf(children[i])===-1 && santasList[j]===children[i] ) {
+      arr.push(children[i]);
+    }
+     }
+   
+  }
+  return arr.sort();
+}
+```
+#### Get number from string
+```javascript
+function getNumberFromString(s) {
+return +s.replace(/\D/gi, '');
+}
+```
+#### Unique In Order
+```javascript
+  function uniqueInOrder(iterable) {
+  let arr = [];
+  for(let i = 0; i < iterable.length; i++) {
+    if(iterable[i] !== arr[arr.length-1]) { //if (iterable[i] != iterable[i+1]) arr.push(iterable[i]);
+      arr.push(iterable[i]);
+    }
+  }
+  return arr;
+}
+```
+#### Can Santa save Christmas?
+```javascript
+function determineTime(dur){
+  let sec = 0;
+  for (let i = 0; i < dur.length; i++) {
+   let newArr = dur[i].split(':');
+   sec += newArr[0] * 3600 + newArr[1] * 60 + +newArr[2];
+  }
+  return sec <= 24 * 3600;
+}
+```               
+#### Tail Swap
+```javascript
+ function tailSwap(arr) {
+  let result = arr.join(':').split(':');
+   return [`${result[0]}:${result[3]}`, `${result[2]}:${result[1]}`];
+ }                
