@@ -1090,3 +1090,24 @@ function determineTime(dur){
   let result = arr.join(':').split(':');
    return [`${result[0]}:${result[3]}`, `${result[2]}:${result[1]}`];
  }                
+```
+#### Get the Middle Character
+```javascript
+function getMiddle(s)
+{
+  let m = Math.trunc(s.length / 2);
+    if (s.length % 2 !== 0){
+      return s[m];
+    } else {
+      return s[m-1]+s[m];
+    }
+  }
+```
+#### Isograms
+```javascript
+function isIsogram(str){
+let arr = str.toUpperCase().split('');
+ const nonDuplicates = arr.filter(el => arr.indexOf(el) === arr.lastIndexOf(el));
+  return nonDuplicates.join('').length>=str.length;
+}
+```
