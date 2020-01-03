@@ -1111,3 +1111,74 @@ let arr = str.toUpperCase().split('');
   return nonDuplicates.join('').length>=str.length;
 }
 ```
+#### Jaden Casing Strings
+```javascript
+String.prototype.toJadenCase = function () {
+return this.split(' ').map(el => el[0].toUpperCase() + el.slice(1)).join(' ');
+};
+```
+#### Exes and Ohs
+```javascript
+function XO(str) {
+  const arr = str.toLowerCase().split('');
+  const x = arr.filter(el => el === 'x');
+  const o = arr.filter(el => el === 'o');
+  return x.length === o.length?;
+}
+```
+#### Growth of a Population
+```javascript
+function nbYear(p0, percent, aug, p) {
+  let y = 0;
+  while (p0 < p) {
+   p0 += p0 * percent / 100 + aug;
+    y++;
+  }
+  return y;
+}
+```
+#### Two to One
+```javascript
+function longest(s1, s2) {
+let arr = s1.concat(s2).split('').sort();
+  let obj = {};
+  for (i = 0; i< arr.length; i++){
+    if (obj[arr[i]]) {
+      obj[arr[i]] = obj[arr[i]]+1;
+    } else {
+      obj[arr[i]] = 1;
+    }
+  }
+  return Object.keys(obj).join('');
+}
+```
+#### Two to One
+```javascript
+function longest(s1, s2) {
+return s1.concat(s2)
+.split('')
+.sort()
+.filter((el,index,arr) => el !== arr[index - 1])
+.join('');
+}
+```
+#### Printer Errors
+```javascript
+function printerError(s) {
+  let s1 = s.split('').sort().join('');
+  let s2 = s1.replace(/[a-m]/gi, '');
+  return `${s2.length}/${s.length}`;
+}
+```
+#### Printer Errors/2
+```javascript
+function printerError(s) {
+    let count = 0;
+    for(let i = 0; i < s.length; i++) {
+      if (s[i] > "m") {
+        count++;
+      }
+    }
+    return count+"/"+s.length;
+}
+```
