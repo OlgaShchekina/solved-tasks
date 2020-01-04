@@ -1182,3 +1182,89 @@ function printerError(s) {
     return count+"/"+s.length;
 }
 ```
+#### List Filtering
+```javascript
+function filter_list(l) {
+  return l.filter(el => typeof el === 'number');
+}
+```
+#### Ones and Zeros
+```javascript
+function binaryArrayToNumber(arr){
+  return parseInt(arr.join(''), 2);
+}
+```
+#### Categorize New Member
+```javascript
+function openOrSenior(data){
+return data.map(([age, handicap]) => (age > 54 && handicap > 7) ? 'Senior' : 'Open');
+}
+```
+#### Categorize New Member.2
+```javascript
+function openOrSenior(data){
+  let rez=[];
+  for(let i = 0; i < data.length; i++){
+    if(data[i][0] > 54 && data[i][1] > 7) {
+      rez.push("Senior");
+    } else {
+      rez.push("Open");
+    }
+    }
+      return rez;
+  }
+
+```
+#### Friend or Foe?
+```javascript
+function friend(friends){
+  return friends.filter(el => el.length === 4);
+}
+```
+#### Number of People in the Bus
+```javascript
+function number(busStops){
+  let sum = 0;
+  for (let i = 0; i < busStops.length; i++){
+    sum = sum + busStops[i][0]-busStops[i][1];
+  }
+return sum;
+}
+```
+#### Number of People in the Bus/2
+```javascript
+let number = function(busStops){
+  return busStops.reduce((acc, cur) => {
+    return acc + (cur[0] - cur[1]) 
+  }, 0) 
+}
+```
+#### Money, Money, Money
+```javascript
+function calculateYears(P, i, t, d) {
+let years = 0;
+while (P < d){
+    P = P + P*i - P*i*t;
+    years++
+    }
+    return years;
+}
+```
+#### Reverse words
+```javascript
+function reverseWords(str) {
+return str.split("").reverse().join("").split(" ").reverse().join(" ");
+}
+```
+#### Reverse words/2
+```javascript
+function reverseWords(str) {
+  const reversedWords = [];
+  const orderReversedWords = [];
+  for (let i = str.length - 1; i >= 0; i--) reversedWords.push(str[i]);
+  const words = reversedWords.join("").split(" ");
+  for (let i = words.length - 1; i >= 0; i--)
+    orderReversedWords.push(words[i]);
+  return orderReversedWords.join(" ");
+}
+```
