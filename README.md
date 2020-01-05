@@ -1268,3 +1268,26 @@ function reverseWords(str) {
   return orderReversedWords.join(" ");
 }
 ```
+#### Triple Trouble
+```javascript
+function tripleTrouble(one, two, three){
+  let str = '';
+  for (let i = 0; i < one.length; i++){
+    str = str + one[i]+two[i]+three[i];
+  }
+  return str;
+ }
+```
+#### The Wide-Mouthed frog!
+```javascript
+function mouthSize(animal) {
+  return animal.toLowerCase() === "alligator"? "small":"wide";
+}
+```
+#### Find the stray number
+```javascript
+function stray(numbers) {
+ const nonDuplicates = numbers.filter(el => numbers.indexOf(el) === numbers.lastIndexOf(el));
+ return nonDuplicates[0];
+}
+```
