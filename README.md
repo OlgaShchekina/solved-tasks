@@ -1291,3 +1291,111 @@ function stray(numbers) {
  return nonDuplicates[0];
 }
 ```
+#### Count the Digit
+```javascript
+function nbDig(n, d) {
+let count=0;
+    for (let i = 0;i <= n;i++){
+      let square=(i*i+"").split("");
+      square.forEach((s)=>s == d ? count++ : null)
+    }
+  return count;
+}
+```
+#### Count the Digit/2
+```javascript
+function nbDig(n, d) {
+ let str = '';
+    for(let i = 0; i <= n; i++){
+      str += Math.pow(i, 2);
+    }
+  return str.split(d).length-1;
+}
+```
+#### The highest profit wins!
+```javascript
+function minMax(arr){
+  let res = [];
+  let min = arr[0];
+  let max = arr[0];
+  for (let i = 0; i< arr.length; i++){
+    if (arr[i] < min){
+      min = arr[i];
+    } else  
+      if (arr[i]>max){
+         max = arr[i];
+      }
+  }
+   res.push(min,max);
+  return res;
+}
+}
+```
+#### The highest profit wins!/2
+```javascript
+function minMax(arr){
+let s = arr.sort((a,b) => a-b);
+  return [s[0],s[s.length-1]];
+}
+```
+#### Sum of a sequence
+```javascript
+function sequenceSum(begin, end, step) {
+  sum = 0;
+  for (let i = begin; i <= end ;  i+=step){
+    sum = sum + i;
+  }
+ return begin > end ? 0 : sum;
+}
+```
+#### Sum of all the multiples of 3 or 5
+```javascript
+function findSum(n) {
+  let sum = 0;
+  for (let i = 3 ; i<=n;i++){
+    if (i % 3 === 0 || i % 5 === 0){
+      sum = sum + i;
+    }
+  }
+  return sum;
+}
+}
+```
+#### Maximum Length Difference
+```javascript
+function mxdiflg(a1, a2) {
+  if (a1.length === 0 || a2.length === 0) return -1;
+  let s1 = a1.map(el => el.length);
+  let s2 = a2.map(el => el.length);
+  return Math.max(Math.max(...s1) - Math.min(...s2), Math.max(...s2) - Math.min(...s1));
+}
+```
+#### Maximum Length Difference/2
+```javascript
+const mxdiflg = (a1, a2) => {
+  if (a1.length === 0 || a2.length === 0)  return -1;
+  a1 = a1.map((el=> el.length)).sort((a,b)=>a-b);
+  a2 = a2.map((el=> el.length)).sort((a,b)=>a-b);
+  const max1 = a1[a1.length - 1]- a2[0];
+  const max2 = a2[a2.length - 1] - a1[0];
+  return max1 > max2 ? max1 : max2;
+};
+```
+#### Create Phone Number
+```javascript
+function createPhoneNumber(numbers){
+  let n = numbers.join('');
+  return `(${n.substring(0, 3)}) ${n.substring(3, 6)}-${n.substring(6)}`;
+}
+```
+#### Create Phone Number/2
+```javascript
+function createPhoneNumber(numbers){
+  let format = "(xxx) xxx-xxxx";
+  for(let i = 0; i < numbers.length; i++)
+  {
+    format = format.replace('x', numbers[i]);
+  }
+  return format;
+}
+```
