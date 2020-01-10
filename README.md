@@ -1399,3 +1399,59 @@ function createPhoneNumber(numbers){
   return format;
 }
 ```
+#### Double Sort
+```javascript
+function dbSort(a){
+  let s = [];
+  let s1 = [];
+  for (let i =0;i<a.length;i++){
+    if (typeof a[i] === 'number'){
+      s.push(a[i]);
+    } else if (typeof a[i] === 'string'){
+      s1.push(a[i]);
+    }
+  }
+return s.sort((a,b)=>a-b).concat(s1.sort());
+}
+```
+#### You're a square!
+```javascript
+function isSquare(n){
+  return (Number.isInteger(Math.sqrt(n)));
+}
+```
+#### Sum of odd numbers
+```javascript
+function rowSumOddNumbers(n) {
+return Math.pow(n,3);
+}
+```
+#### Holiday II - Plane Seating
+```javascript
+function planeSeat(a){
+  let b = a.replace(/[a-z]/gi,'');
+  let c = a.replace(/[0-9]/gi,'');
+  let arr = [];
+
+  for (let i = 0; i < 1; i++){
+    arr.push(b,c);
+  }
+if (c ==='I'||c ==='J') return 'No Seat!!';  
+if (arr[0] > 0 && arr[0] < 21 && arr[1].match(/[A-C]/)) return 'Front-Left';
+if (arr[0] > 0 && arr[0] < 21 && arr[1].match(/[D-F]/)) return 'Front-Middle';
+if (arr[0] > 0 && arr[0] < 21 && arr[1].match(/[G-K]/)) return 'Front-Right';
+if (arr[0] > 20 && arr[0] <41 && arr[1].match(/[A-C]/)) return 'Middle-Left';
+if (arr[0] > 20 && arr[0] <41 && arr[1].match(/[D-F]/)) return 'Middle-Middle';
+if (arr[0] > 20 && arr[0] <41 && arr[1].match(/[G-K]/)) return 'Middle-Right';
+if (arr[0] > 40 && arr[0] <61 && arr[1].match(/[A-C]/)) return 'Back-Left';
+if (arr[0] > 40 && arr[0] <61 && arr[1].match(/[D-F]/)) return 'Back-Middle';
+if (arr[0] > 40 && arr[0] <61 && arr[1].match(/[G-K]/)) return 'Back-Right';
+return 'No Seat!!';
+}
+```
+#### Maximum Multiple
+```javascript
+function maxMultiple(divisor, bound){
+return Math.trunc(bound/divisor) * divisor;
+}
+```
