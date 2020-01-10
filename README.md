@@ -1455,3 +1455,85 @@ function maxMultiple(divisor, bound){
 return Math.trunc(bound/divisor) * divisor;
 }
 ```
+#### Borrower Speak
+```javascript
+function borrow(s){
+  return s.toLowerCase().replace(/\W/g, '');
+}
+```
+#### Ironman Triathlon
+```javascript
+function iTri(s){
+  let total = 140.6;
+  if (s === 0) return 'Starting Line... Good Luck!';
+  if (s < 2.4) return {Swim:`${(total-s).toFixed(2)} to go!`};
+  if (s < 2.4 + 112) return {Bike:`${(total-s).toFixed(2)} to go!`};
+  if (s < (total - 10)) return {Run:`${(total-s).toFixed(2)} to go!`};
+  if (s < total) return {Run:'Nearly there!'};
+  return "You're done! Stop running!";
+}
+```
+#### Find the odd int
+```javascript
+function findOdd(A) {
+ let obj = {};
+  for (let i = 0; i< A.length; i++){
+    if (obj[A[i]]) {
+      obj[A[i]] = obj[A[i]]+1;
+    } else {
+      obj[A[i]] = 1;
+    }
+  }
+  for(let key in obj) {
+      if ((obj[key])%2!==0){
+        return +key;
+     }
+  }
+}
+```
+#### Find the odd int/2
+```javascript
+function findOdd(A) {
+
+  for(let i = 0;i < A.length;i++)
+  {
+    let notDuplic=A.filter(el=>el===A[i]);
+    if(notDuplic.length%2!==0)
+    return notDuplic[0];
+  }
+}
+```
+#### Multiples of 3 or 5
+```javascript
+function solution(n){
+    let sum = 0;
+    for (let i = 3 ; i < n;i++){
+        if (i % 3 === 0 || i % 5 === 0){
+            sum = sum + i;
+        }
+    }
+    return sum;
+}
+```
+#### Persistent Bugger.
+```javascript
+function persistence(num) {
+  let count = 0;
+  num = num.toString();
+  while (num.length > 1) {
+    count++;
+    num = num.split('').reduce((a, b) => a * b).toString();
+  } return count;
+}
+```
+#### Persistent Bugger-2
+```javascript
+function persistence(num) {
+let count = 0;
+   for (let i = 0; num > 9; i++) {
+     num = num.toString().split('').reduce((acc, curr) => acc * curr);
+     count++
+   }
+   return count;
+}
+```
