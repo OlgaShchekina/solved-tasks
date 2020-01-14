@@ -1537,3 +1537,14 @@ let count = 0;
    return count;
 }
 ```
+#### Persistent Bugger-2
+```javascript
+function persistence(num) {
+let count = 0;
+   for (let i = 0; num > 9; i++) {
+     num = num.toString().split('').reduce((acc, curr) => acc * curr);
+     count++
+   }
+   return count;
+}
+```
