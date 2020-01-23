@@ -1537,14 +1537,63 @@ let count = 0;
    return count;
 }
 ```
-#### Persistent Bugger-2
+#### Counting Duplicates
 ```javascript
-function persistence(num) {
-let count = 0;
-   for (let i = 0; num > 9; i++) {
-     num = num.toString().split('').reduce((acc, curr) => acc * curr);
-     count++
-   }
-   return count;
+function duplicateCount(text){
+  let arr = text.toLowerCase().split('').sort();
+  return arr.filter((el, i) => i !== arr.indexOf(el) && i === arr.lastIndexOf(el)).length;
 }
+```
+#### Duplicate Encoder
+```javascript
+function duplicateEncode(word){
+  return word
+    .toLowerCase()
+    .split('')
+    .map((el, i, arr)=> arr.indexOf(el) === arr.lastIndexOf(el) ? '(' : ')')
+    .join('');
+}
+```
+#### Duplicate Encoder/2
+```javascript
+function duplicateEncode(word){
+ word = word.toLowerCase();
+  let str ='';
+  for (let i = 0;i < word.length; i++){
+    if (word.indexOf(word[i])===word.lastIndexOf(word[i])){
+      str = str + '(';
+    } else {
+        str = str + ')';
+        }
+  }
+  return str;
+}
+```
+#### Find The Parity Outlier
+```javascript
+function findOutlier(arr){
+  let even = arr.filter(el => el % 2 === 0);
+  let odd = arr.filter(el => el % 2 !== 0);
+  return even.length === 1 ? even[0] : odd[0];
+}
+```
+#### Sum of Digits / Digital Root
+```javascript
+function digital_root(num) {
+   for (let i = 0; num > 9; i++) { //пока число двузначное, считаем сумму
+     num = num.toString().split('').reduce((acc, curr) => +acc + +curr);
+   }
+   return num;
+}
+//console.log(digital_root(456)) / 6
+```
+#### Tribonacci Sequence
+```javascript
+function tribonacci(signature,num){
+  if(num === 0) return [];
+  for(let i=0; i<num-3; i++){
+    signature.push(signature[i] + signature[i+1] + signature[i+2]);
+  } return signature.slice(0, num);
+}
+console.log([2,4,7], 10) // [2, 4, 7, 13, 24, 44, 81, 149, 274, 504]
 ```
