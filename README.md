@@ -1597,3 +1597,10 @@ function tribonacci(signature,num){
 }
 console.log([2,4,7], 10) // [2, 4, 7, 13, 24, 44, 81, 149, 274, 504]
 ```
+#### Kebabize
+```javascript
+function kebabize(str) {
+ return str.replace(/[0-9]/g, '').replace(/([A-Z])/g, "-$1").toLowerCase().replace(/^-/, '');
+console.log(kebabize('camelsHave3Humps'));
+}
+```
