@@ -1593,7 +1593,8 @@ function tribonacci(signature,num){
   if(num === 0) return [];
   for(let i=0; i<num-3; i++){
     signature.push(signature[i] + signature[i+1] + signature[i+2]);
-  } return signature.slice(0, num);
+  } 
+return signature.slice(0, num);
 }
 console.log([2,4,7], 10) // [2, 4, 7, 13, 24, 44, 81, 149, 274, 504]
 ```
@@ -1601,6 +1602,70 @@ console.log([2,4,7], 10) // [2, 4, 7, 13, 24, 44, 81, 149, 274, 504]
 ```javascript
 function kebabize(str) {
  return str.replace(/[0-9]/g, '').replace(/([A-Z])/g, "-$1").toLowerCase().replace(/^-/, '');
-console.log(kebabize('camelsHave3Humps'));
 }
+console.log(kebabize('camelsHave3Humps'));
+```
+#### Your order, please
+```javascript
+function order(words){
+return words.split(' ').sort((a,b)=>a.match(/\d/) - b.match(/\d/)).join(' ');
+}
+console.log(order("4of Fo1r pe6ople g3ood th5e the2" ));
+```
+#### Take a Ten Minute Walk
+```javascript
+function isValidWalk(walk) {
+  const north = walk.filter(direction => direction === 'n').length;
+  const south = walk.filter(direction => direction === 's').length;
+  const west = walk.filter(direction => direction === 'w').length;
+  const east = walk.filter(direction => direction === 'e').length;
+  return walk.length === 10 && north === south && west === east;
+}
+console.log(isValidWalk(['n','s','n','s','n','s','n','s','n','s']))
+```
+#### Take a Ten Minute Walk -2
+```javascript
+function isValidWalk(walk) {
+    let obj = {'n':0, 's':0, 'e':0, 'w':0};
+  
+   for(let i=0;i<walk.length;i++){
+    obj[walk[i]] += 1;
+  }
+ return obj.n - obj.s === 0 && obj.e - obj.w === 0 && walk.length === 10;
+}
+console.log(isValidWalk(['n','s','n','s','n','s','n','s','n','s']))
+```
+#### Dubstep
+```javascript
+function songDecoder(song){
+ return song.replace(/(WUB)+/g, ' ').trim();
+//return song.split("WUB").filter(el => el !== '').join(' '); 2 вариант
+}
+console.log(songDecoder("AWUBWUBWUBBWUBWUBWUBC"))
+```
+#### Break camelCase
+```javascript
+function solution(string) {
+     return string.replace(/([A-Z])/g, ' $1');  
+}
+console.log(solution('camelCasing'))
+```
+#### Break camelCase -2
+```javascript
+  string = string.split('').map(function (el) {
+    if (el === el.toUpperCase()) {
+      el = ' ' + el;
+    }
+    return el;
+  });
+  return string.join('');
+}
+}
+```
+#### Odd/Even number of divisors
+```javascript
+function oddity(n){
+ return Number.isInteger(Math.sqrt(n))? "odd": "even";
+}
+console.log(oddity(36)//odd
 ```
