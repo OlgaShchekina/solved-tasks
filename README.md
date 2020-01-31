@@ -1683,3 +1683,24 @@ function likes(names) {
 }
 console.log(likes(['Alex', 'Jacob', 'Mark', 'Max']))//'Alex, Jacob and 2 others like this'
 ```
+#### Smallest Difference
+```javascript
+function smallestDiff(arr1,arr2) {
+  let result = Number.MAX_SAFE_INTEGER;
+  arr1.sort((a,b)=>a-b);
+   arr2.sort((a,b)=>a-b);
+  if (arr1.length ===0 && arr2.length ===0) return -1;
+  if(arr1.length === 0) return arr2[0];
+  if(arr2.length ===0) return arr1[0];
+  for(let i = 0; i < arr1.length; i++){
+    for (let j = 0; j < arr2.length; j++){
+      if (Math.abs(arr2[j]-arr1[i]) < result){
+        result = Math.abs(arr1[i] - arr2[j]);
+      } 
+    }
+  }
+
+  return result;
+}
+console.log(smallestDiff([1, 3, 5, 23, 5],[45, 34, 67, 2, 0]))
+```
