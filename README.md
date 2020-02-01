@@ -1704,3 +1704,21 @@ function smallestDiff(arr1,arr2) {
 }  
 console.log(smallestDiff([1, 3, 5, 23, 5],[45, 34, 67, 2, 0]))
 ```
+#### Playing with digits
+```javascript
+function digPow(n, p){
+  let arr = n.toString().split('');
+  let result = 0;
+  for(let i=0; i<arr.length; i++){
+    result = result + Math.pow(arr[i], p);
+    p++;
+  }
+  let data = result/n;
+  if(result % n === 0){
+  return data;
+  }else{
+  return -1;
+  }
+}
+console.log(digPow(46288, 3)); //51
+```
