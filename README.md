@@ -1722,3 +1722,18 @@ function digPow(n, p){
 }
 console.log(digPow(46288, 3)); //51
 ```
+#### Sum Mixed Array
+```javascript
+function sumMix(x){
+let sum = 0;
+for (let i = 0; i < x.length; i++){
+if (typeof x[i] === "string"){
+x[i] = +x[i];
+}
+sum = sum + x[i];
+}
+return sum;
+}
+console.log(sumMix([9, 3, '7', '3']));
+```
+    
