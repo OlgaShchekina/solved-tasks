@@ -1736,4 +1736,43 @@ return sum;
 }
 console.log(sumMix([9, 3, '7', '3']));
 ```
+#### Sum of Minimums!(7kui)
+```javascript
+function sumOfMinimums(arr) {
+  let sum =0;
+for (let i = 0; i< arr.length;i++){
+  arr[i].sort((a,b)=>a-b);
+  sum = sum + arr[i][0];
+}
+  return sum;
+}
+console.log(sumOfMinimums([[11, 12, 14, 54], [67, 89, 90, 56], [7, 9, 4, 3], [9, 8, 6, 7]])); //76
+```
+#### What's my golf score? (7kui)
+```javascript
+function golfScoreCalculator(parList, scoreList){
+  let sum1=0;
+  let sum2=0;
+  for (let i = 0; i< parList.length;i++) {
+    sum1 = sum1 + +parList[i];
+    }
+  for (let j = 0; j< scoreList.length;j++) {
+    sum2 = sum2 + +scoreList[j];
+  }
+  return sum2-sum1;
+
+}
+console.log(golfScoreCalculator('443454444344544443', '353445334534445344')); //-1
+    
+```
+#### What's my golf score? (7kui)-2
+```javascript
+  function golfScoreCalculator(parList, scoreList){
+    let result = 0;
+    for (let i = 0; i < parList.length; i++) {
+        result += scoreList[i] - parList[i];
+    }
+    return result;
+}
+```
     
