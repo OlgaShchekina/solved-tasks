@@ -1775,4 +1775,63 @@ console.log(golfScoreCalculator('443454444344544443', '353445334534445344')); //
     return result;
 }
 ```
+#### Balanced Number (Special Numbers Series #1 )(7kui)
+```javascript
+function balancedNum(number)
+{
+  let sum = 0;
+  let sum1 = 0;
+  let str = number.toString();
+  if (str.length < 3) return "Balanced";
+  if (str.length%2===0){
+      for(let i = 0; i < str.length/2-1; i++){
+    sum = sum + +str[i];
+      }
+    for(let i =str.length/2+1; i< str.length ;i++){
+      sum1 = sum1+ +str[i];
+  }
+    } else if(str.length%2!==0){
+          for(let i = 0; i < Math.floor(str.length/2); i++){
+    sum = sum + +str[i];
+      }
+         for(let i =Math.floor(str.length/2)+1; i< str.length ;i++){
+      sum1 = sum1+ +str[i];
+  }
+      
+    }
+  
+    return sum === sum1?"Balanced":"Not Balanced";
+}
+console.log(balancedNum(1230987)); // "Not Balanced"
+```
+#### Balanced Number (Special Numbers Series #1 )(7kui) -2
+```javascript
+function balancedNum(number){
+    let result = 0;
+    number = number.toString();
+    for(let i = 0; i < number.length / 2 - 1; i++){
+        result += +number[i] - +number[number.length - 1 - i];
+    }
+    return result === 0 ? "Balanced" : "Not Balanced";
+}
+```
+#### Balanced Number (Special Numbers Series #1 )(7kui) -3
+```javascript
+function balancedNum(number)
+{
+  let sum = 0;
+  let str = number.toString();
+  if (str.length%2===0){
+      for(let i = 0; i < str.length/2-1; i++){
+    sum = sum + +str[i] - + str[str.length - 1 - i];
+      }
+    } else if(str.length%2!==0){
+          for(let i = 0; i < Math.floor(str.length/2); i++){
+    sum = sum + +str[i] - + str[str.length - 1 - i];
+      }      
+    }  
+    return sum ===0?"Balanced":"Not Balanced";
+}
+console.log(balancedNum(1)); // "Balanced"
+```
     
