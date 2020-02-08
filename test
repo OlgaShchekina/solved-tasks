@@ -1,9 +1,0 @@
-function reverseWords(str) {
-  const reversedWords = [];
-  const orderReversedWords = [];
-  for (let i = str.length - 1; i >= 0; i--) reversedWords.push(str[i]);
-  const words = reversedWords.join("").split(" ");
-  for (let i = words.length - 1; i >= 0; i--)
-    orderReversedWords.push(words[i]);
-  return orderReversedWords.join(" ");
-}

@@ -1736,7 +1736,7 @@ return sum;
 }
 console.log(sumMix([9, 3, '7', '3']));
 ```
-#### Sum of Minimums!(7kui)
+#### Sum of Minimums!(7kuy)
 ```javascript
 function sumOfMinimums(arr) {
   let sum =0;
@@ -1748,7 +1748,7 @@ for (let i = 0; i< arr.length;i++){
 }
 console.log(sumOfMinimums([[11, 12, 14, 54], [67, 89, 90, 56], [7, 9, 4, 3], [9, 8, 6, 7]])); //76
 ```
-#### What's my golf score? (7kui)
+#### What's my golf score? (7kuy)
 ```javascript
 function golfScoreCalculator(parList, scoreList){
   let sum1=0;
@@ -1765,7 +1765,7 @@ function golfScoreCalculator(parList, scoreList){
 console.log(golfScoreCalculator('443454444344544443', '353445334534445344')); //-1
     
 ```
-#### What's my golf score? (7kui)-2
+#### What's my golf score? (7kuy)-2
 ```javascript
   function golfScoreCalculator(parList, scoreList){
     let result = 0;
@@ -1775,7 +1775,7 @@ console.log(golfScoreCalculator('443454444344544443', '353445334534445344')); //
     return result;
 }
 ```
-#### Balanced Number (Special Numbers Series #1 )(7kui)
+#### Balanced Number (Special Numbers Series #1 )(7kuy)
 ```javascript
 function balancedNum(number)
 {
@@ -1804,7 +1804,7 @@ function balancedNum(number)
 }
 console.log(balancedNum(1230987)); // "Not Balanced"
 ```
-#### Balanced Number (Special Numbers Series #1 )(7kui) -2
+#### Balanced Number (Special Numbers Series #1 )(7kuy) -2
 ```javascript
 function balancedNum(number){
     let result = 0;
@@ -1815,7 +1815,7 @@ function balancedNum(number){
     return result === 0 ? "Balanced" : "Not Balanced";
 }
 ```
-#### Balanced Number (Special Numbers Series #1 )(7kui) -3
+#### Balanced Number (Special Numbers Series #1 )(7kuy) -3
 ```javascript
 function balancedNum(number)
 {
@@ -1834,4 +1834,35 @@ function balancedNum(number)
 }
 console.log(balancedNum(1)); // "Balanced"
 ```
-    
+#### Remove duplicate words (7kuy)
+```javascript
+function removeDuplicateWords (s) {
+  let s1 = s.split(' ');
+  let result=[];
+  for(let i =0; i < s1.length ; i++){
+    if(result.indexOf(s1[i]) === -1) 
+      result.push(s1[i]);
+  }
+  return result.join(' ');
+}
+console.log(removeDuplicateWords('alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta')); //"alpha beta gamma delta"
+```
+#### Remove duplicate words (7kuy)-2
+```javascript
+function removeDuplicateWords (s) {
+return s.split(' ').filter((el,i,s)=>s.indexOf(el)===i).join(' ');
+}
+```
+#### Jumping Number (Special Numbers Series #4) (7kuy)
+```javascript
+function jumpingNumber(n){
+    let n1 = n.toString().split('');
+    for (let i = 0; i< n1.length-1; i++){
+        if ((Math.abs(n1[i + 1] - n1[i]) !== 1)) {
+            return "Not!!";
+        }
+    }
+    return "Jumping!!";
+}
+console.log(jumpingNumber(4569));
+```
