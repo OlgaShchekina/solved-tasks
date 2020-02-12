@@ -1866,3 +1866,95 @@ function jumpingNumber(n){
 }
 console.log(jumpingNumber(4569));
 ```
+#### Complete The Pattern #1 7 kyu
+```javascript
+function pattern(n){
+ let str= "";
+ for(let i=1; i<=n; i++)
+  {
+    for(let j=1; j<=i; j++)
+     {  
+       str+=i;
+      }
+    str+="\n";
+   }
+ return str.slice(0,-1);
+}
+console.log(pattern(5)); //1/22/333/4444/55555
+```
+#### Complete The Pattern #2 7 kyu
+```javascript
+function pattern(n){
+ let res="";
+ for(let i=1; i<=n; i++)
+  {
+    for(let j=n; j>=i; j--)
+     {  
+       res+=j;
+      }
+    res+="\n";
+   }
+ return res.slice(0,-1);
+}
+console.log(pattern(5));  //54321/5432/543/54/5
+
+```
+#### Complete The Pattern #3 (Horizontal Image of #2) 7 kyu
+```javascript
+function pattern(n){
+ let str="";
+ for (let i=n; i>0; i--){
+   for (let j=n; j>=i; j--){
+     str += j;
+   }
+     str += "\n";
+ }
+ return str.slice(0,-1);
+}
+console.log(pattern(5));  //5/54/543/5432/54321
+```
+#### Complete The Pattern #4 7 kyu
+```javascript
+function pattern(n){
+ let str="";
+for (let i = 1; i <=n;i++){
+  for (let j = i; j <=n;j++){
+    str+=j;
+  }
+  str+='\n'
+}
+ return str.slice(0,-1);
+}
+console.log( pattern(4)); //1234/234/34/4
+```
+#### Complete The Pattern #6 - Odd Ladder 7 kyu
+```javascript
+function pattern(n){
+ let str="";
+  for(let i = 1; i <= n;i+=2){
+    for (let j = 1; j <=i;j++){
+      str+=i;
+    }
+     str+="\n"
+  }
+    
+ return str.slice(0,-1);
+}
+console.log(pattern(6)); //1/333/55555
+```
+#### Complete The Pattern #5 - Even Ladder 7 kyu
+```javascript
+function pattern(n){
+ let str="";
+  for(let i = 2; i <= n;i+=2){
+    for (let j = 1; j <=i;j++){
+      str+=i;
+    }
+     str+="\n"
+  }
+    
+ return str.slice(0,-1);
+}
+console.log(pattern(6)); //22/4444/666666
+```
+     
