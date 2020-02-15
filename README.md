@@ -1957,4 +1957,27 @@ function pattern(n){
 }
 console.log(pattern(6)); //22/4444/666666
 ```
+#### Form The Minimum 7kyu
+```javascript
+function minValue(values){
+  return values.sort((a,b)=>a-b).filter((el,i) => i === values.indexOf(el)).join('')*1;
+}
+console.log(minValue([4, 8, 1, 4])); //148
+```
+#### Form The Largest 7kyu
+```javascript
+function maxNumber(values){
+  return values.toString().split('').sort().reverse().join('')*1;
+}
+console.log(maxNumber(63792)); // 97632
+```
+
+#### Tidy Number (Special Numbers Series #9) 7kyu
+```
+function tidyNumber(n){
+  let res = n.toString().split('').map(el=>el*1).sort((a, b) => a - b).join('')*1;
+  return res === n?true:false;
+}
+console.log(tidyNumber(1220));
+```
      
