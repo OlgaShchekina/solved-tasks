@@ -1980,4 +1980,11 @@ function tidyNumber(n){
 }
 console.log(tidyNumber(1220));
 ```
-     
+####  Most digits  7 kyu
+```javascript
+function findLongest(array){
+return array.reduce((res, curr) => (String(res).length < String(curr).length) ? curr : res);
+}
+console.log(findLongest([8, 900, 500]));
+```
+         
