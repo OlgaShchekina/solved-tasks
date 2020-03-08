@@ -1985,6 +1985,69 @@ console.log(tidyNumber(1220));
 function findLongest(array){
 return array.reduce((res, curr) => (String(res).length < String(curr).length) ? curr : res);
 }
-console.log(findLongest([8, 900, 500]));
+console.log(findLongest([8, 900, 500])); //900
+```
+#### Fuel Calculator 8kyu
+```javascript
+function fuelPrice(litres, pricePerLiter) {
+
+  for (let i = 2; i <= 10; i += 2) {
+    if (litres >= i) {
+      pricePerLiter -= 0.05
+    }
+  }
+  return Number((litres * pricePerLiter).toFixed(2))
+}
+console.log(fuelPrice(5, 1.23)); //5.65
+```
+#### N-th Power 8kyu
+```javascript
+function index(array, n){
+let power;
+ if (n > array.length-1){
+   return -1
+ } else {
+power = Math.pow(array[n],n)
+}
+  return power;
+}
+
+console.log(index([1, 3, 10, 100],3));//1000000
+```
+#### Mispelled word 7 kyu - 1
+     
+```javascript
+function mispelled(word1, word2) {
+  let count = 0,
+      largest = Math.max(word1.length, word2.length);
+  for(let i = 0; i < largest; i++) {
+    if(word1.indexOf(word2[i]) === -1) {
+      count++;
+    }
+  }
+  if(count <= 1) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(mispelled('versed', 'xersed')) //true
+```
+#### Mispelled word 7 kyu - 2
+```javascript
+var mispelled = function(word1, word2)
+{
+  let largest = word1.length - word2.length > 0 ? word1.length : word2.length;
+  let num = 0;
+  
+  for(let i = 0; i < largest; i++) {
+    if(word1[i] !== word2[i]) {
+      num++;
+    }
+  }
+  
+  return num === 1;
+}
+console.log(mispelled('versed', 'xersed')) //true
 ```
          
