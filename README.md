@@ -2050,4 +2050,26 @@ var mispelled = function(word1, word2)
 }
 console.log(mispelled('versed', 'xersed')) //true
 ```
+#### Freudian translator 8 kyu
+```javascript
+function toFreud(string) {
+return string.split(" ").map((el)=> el === ""?"":"sex").join(" ");
+}
+console.log(toFreud("This is a test")); // "sex sex sex sex"
+```
+#### Training JS #16: Methods of String object--slice(), substring() and substr() 8
+```javascript
+function cutIt(arr){
+  const minLength = Math.min(...arr.map(el => el.length));
+  return arr.map(el => el.slice(0, minLength))
+}
+console.log(cutIt(["codewars","javascript","java"])); // ["code", "java", "java"]
+```
+#### Be Concise III - Sum Squares 8
+```
+function sumSquares(array) {
+ return array.reduce((acc,curr)=>acc+curr**2,0);
+}
+console.log(sumSquares([11,13,15,18,2])); //843
+```
          
