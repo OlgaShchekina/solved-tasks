@@ -2066,10 +2066,21 @@ function cutIt(arr){
 console.log(cutIt(["codewars","javascript","java"])); // ["code", "java", "java"]
 ```
 #### Be Concise III - Sum Squares 8
-```
+```javascript
 function sumSquares(array) {
  return array.reduce((acc,curr)=>acc+curr**2,0);
 }
 console.log(sumSquares([11,13,15,18,2])); //843
+```
+
+#### Array element parity 7 kyu
+```javascript
+
+  function solve(arr){
+  for (let i=0; i<arr.length; ++i)
+    if (arr.indexOf(-arr[i])===-1)
+      return arr[i];
+}
+console.log(solve([1,-1,2,-2,3])); //3
 ```
          
