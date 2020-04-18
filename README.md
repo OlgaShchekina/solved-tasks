@@ -2083,4 +2083,18 @@ console.log(sumSquares([11,13,15,18,2])); //843
 }
 console.log(solve([1,-1,2,-2,3])); //3
 ```
+
+#### 7 kyu Leap Years
+```
+function isLeapYear(year) {
+if (year  % 4 !==0)
+return false;
+else if (year % 100 !==0)
+return true;
+else if (year % 400 ===0)
+return true;
+else return false;
+}
+console.log(isLeapYear(1984)) //true
+```
          
